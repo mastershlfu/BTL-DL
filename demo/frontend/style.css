@@ -1,0 +1,120 @@
+:root {
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --bg-dark: #0f172a;
+  --sidebar-bg: #1e293b;
+  --text-main: #f8fafc;
+  --border-color: #334155;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 320px;
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--border-color);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 4px 0 15px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #818cf8;
+}
+
+/* Buttons */
+.upload-btn {
+  display: block;
+  background: #334155;
+  padding: 12px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  border: 1px dashed #64748b;
+}
+
+.upload-btn:hover { background: #475569; }
+.upload-btn input { display: none; }
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all 0.2s;
+}
+
+.btn-primary { background: var(--primary); color: white; }
+.btn-primary:hover { background: var(--primary-hover); }
+.btn-success { background: #10b981; color: white; }
+.btn-success:hover { background: #059669; }
+
+/* Canvas Area */
+.main-content {
+  flex-grow: 1;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  background-image: radial-gradient(#334155 1px, transparent 1px);
+  background-size: 20px 20px; /* Hiệu ứng lưới dot */
+}
+
+.canvas-wrapper {
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  background-color: #000;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* JSON Output */
+.output-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+pre {
+  background: #020617;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #34d399;
+  border: 1px solid var(--border-color);
+  height: 200px;
+  overflow-y: auto;
+}
+
+.shortcuts {
+  font-size: 13px;
+  color: #94a3b8;
+  background: rgba(0,0,0,0.2);
+  padding: 10px;
+  border-radius: 8px;
+}
+.shortcuts h4 { margin: 0 0 5px 0; color: #cbd5e1; }
+.shortcuts ul { padding-left: 15px; margin: 0; }

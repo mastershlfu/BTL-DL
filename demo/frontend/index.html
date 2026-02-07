@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pro Annotator | Bounding Box Tool</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app-container">
+  <aside class="sidebar">
+    <div class="logo">📦 ProAnnotator</div>
+    
+    <div class="control-group">
+      <label class="upload-btn">
+        <input type="file" id="upload" accept="image/*" />
+        📁 Tải ảnh lên
+      </label>
+    </div>
+
+    <div class="control-group">
+      <button id="drawBtn" class="btn btn-primary">✏️ Chế độ vẽ: TẮT</button>
+      <button id="submitBtn" class="btn btn-success">✅ Xuất dữ liệu JSON</button>
+    </div>
+
+    <div class="shortcuts">
+      <h4>Phím tắt</h4>
+      <ul>
+        <li><span>Del</span> Xóa box được chọn</li>
+        <li><span>Drag</span> Di chuyển/Resize box</li>
+      </ul>
+    </div>
+
+    <div class="output-container">
+      <h4>Output JSON</h4>
+      <pre id="output">[]</pre>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="canvas-wrapper">
+      <canvas id="canvas"></canvas>
+    </div>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
