@@ -34,3 +34,7 @@ test_sets
 # Bỏ qua models
 models
 models/
+
+# Bỏ qua toàn bộ file .pth .pt
+**/*.pth
+**/*.pt
